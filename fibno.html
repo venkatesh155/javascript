@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Fibonacci</title>
+</head>
+<body>
+<button type="button" onclick="fib()"> Button1</button><br>
+<button type="button" onclick="odd()"> Button2 </button><br>
+<button type="button" onclick="even()"> Button3</button><br>
+<p id="demo"></p>
+</body>
+<script type="text/javascript">
+	var limit=prompt("Enter limit 'n' to generate the series");
+	function fib(){
+		
+		var f1=-1,f2=1,f3,count;
+		document.getElementById("demo").innerHTML=" The Fibonacci Series:";
+		for(count=0;count<limit;count++){
+			f3=f1+f2;
+			document.getElementById("demo").innerHTML=document.getElementById("demo").innerHTML+f3+"";
+			f1=f2;
+			f2=f3;
+		}
+	}
+	function odd(){
+		
+		document.getElementById("demo").innerHTML="Odd number Series:";
+		var i,count=0;
+		for(i=1;count<limit;i+=2)
+		{
+			document.getElementById("demo").innerHTML=document.getElementById("demo").innerHTML+i+"";
+			count++;
+		}
+	}
+	function even(){
+		
+		document.getElementById("demo").innerHTML="Even number Series:";
+		var i,count=0;
+		for(i=2;count<limit;i+=2)
+		{
+			document.getElementById("demo").innerHTML=document.getElementById("demo").innerHTML+i+"";
+			count++;
+		}
+
+	}
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>reduction</title>
+</head>
+<body>
+<h1>Marks</h1>
+<div>
+	Enter the number of Students:
+	<input type="text" id="num" name="">
+	<input type="button" value="List the Marks" onclick="add()" name=""><br><br>
+		<div id="get"></div>
+		<br>
+		The Difference in Marks is<br><br>
+				<div id="ge"></div>
+
+</div> 
+<script type="text/javascript">
+			var arr=[];
+	function add(){
+		var num=document.getElementById("num").value;
+		for(var i=0;i<num;i++)
+			arr.push(prompt("Enter marks of students"));
+		document.getElementById("get").innerHTML=arr;
+	document.getElementById("ge").innerHTML = arr.reduce(reduce);
+}
+function reduce(total, num) {
+  return total - num;
+
+}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> user</title>
+	<script type="text/javascript">
+		function getdata(){
+			var f1=document.getElementById('fname').value;
+			var p=document.getElementById('pass').value;
+			if(f1=="nivi" && p=="123"){
+				localStorage.setItem("uname",f1);
+				document.form1.action="user2.html?uname="+f1;
+				document.form1.action="user2.html";
+			} else {
+				alert("invalid username");
+				return false;
+			}
+			}
+	</script>
+</head>
+<body>
+ <div class="container">
+ 	<form action="#" method="post"name="form1">
+ 		<div class="frm">
+ 			<label> Username</label>
+ 			<input type="text" name="" id="fname" required>
+ 			<label> Password</label>
+ 			<input type="Password" name="" id="pass" required>
+ 			<button type="submit" name="submit" onclick="return getdata()"> Login </button>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>string</title>
+</head>
+<body>
+ <button onclick="func()" > String Operations </button>
+ <div id="a"></div><br>
+ <div id="b"></div><br>
+ <div id="c"></div><br>
+ <div id="d"></div><br>
+ <script type="text/javascript">
+ 	function func(){
+ 		var a= prompt("Enter String");
+ 		var b= prompt("Enter String");
+ 		var c= prompt("Enter String");
+ 		var d= prompt("Enter String");
+ 		document.getElement("a").innerHTML=a.slice(9,14);
+ 		document.getElement("b").innerHTML=b;
+ 		document.getElement("c").innerHTML=c;
+ 		var n=b.lastIndexOf("Exam");
+ 		document.getElementById("d").innerHTML=n;
+
+ 	}
+ </script>
+</body>
+</html>
